@@ -2,12 +2,12 @@
   <h1>Cocktails List</h1>
   <ul>
     <% @cocktails.each do |cocktail| %>
-      <li><%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <li class="card"><%= link_to cocktail.name, cocktail_path(cocktail) %>
       </li>
     <% end %>
   </ul>
   <%= link_to "Create new cocktail", new_cocktail_path %>
-  <%= cl_image_tag("san_francisco.jpg",
+  <%= cl_image_tag("https://res.cloudinary.com/drdoomsday/image/upload/v1605836623/qt9ays8wyxxuujcp2b4y.jpg",
       width: 400, height: 300, crop: :fill) %>
 </div>
 
