@@ -1,9 +1,25 @@
-<h1>test</h1>
-<%= simple_form_for([@cocktail, @dose]) do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.all %>
-  <%= f.submit %>
-  <% end %>
+<div class="form-container">
+  <nav class ="navbar mb-0">
+    <div class = "nav-btn">
+      <%= link_to "HOME", cocktails_path%>
+    </div>
+        <div class= "nav-title">
+        <h1>Cocktail Tones</h1>
+      </div>
+      <div class="none">
+    </div>
+  </nav>
 
-<%= link_to "Back to home", cocktails_path %>
+   <div class="mx-5">
+    <h2 class='py-5 pl-3'>What goes inside a <%= @cocktail.name  %>? </h2>
+    <div class="forms py-5 px-5">
 
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.association :ingredient, collection: Ingredient.all, error: 'You must provide an ingredient!!', label_html: { class: 'form-style' } %>
+      <%= f.input :description, label: 'Measurement', error: 'You must provide a measurement for the ingredient!!', label_html: { class: 'form-style' } %>
+      <%= f.button :submit, 'Add to cocktail', class: 'new-button' %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

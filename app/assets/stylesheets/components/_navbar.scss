@@ -10,3 +10,26 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+.navbar {
+  background-color: #60058633;
+  height: 80px;
+  text-transform: uppercase;
+  box-shadow: 0 0 3px 3px #e113ef42;
+  border-radius: 4px;
+  position: relative;
+    h1 {
+    font-size: 38px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 51, 78, 0.8);
+    font-family: 'Limelight', cursive;
+    margin-bottom: 0;
+  }
+}
+
+.nav-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}

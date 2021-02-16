@@ -19,6 +19,6 @@ ingredients_list.each do |ingredient|
   Ingredient.create!(name: ingredient["strIngredient1"])
 end
 
-puts "Ingredient's list done mofo!"
+puts "Ingredient's list finalised!"
 
 

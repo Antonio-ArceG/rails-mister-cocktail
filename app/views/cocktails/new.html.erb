@@ -1,11 +1,24 @@
-<div class="container"><h1>Create a new Cocktail!</h1>
+<div class="form-container">
+  <nav class ="navbar mb-0">
+    <div class = "nav-btn">
+      <%= link_to "HOME", cocktails_path%>
+    </div>
+        <div class= "nav-title">
+        <h1>Cocktail Tones</h1>
+      </div>
+      <div class="none">
+    </div>
+  </nav>
 
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%#= f.input :dose %>
-  <%#= f.input :ingredients, collection: Ingredient.all %>
-  <%= f.submit %>
-  <% end %>
-
-  <%= link_to "Back to home", cocktails_path %>
+  <div class="mx-5">
+    <h2 class='py-5 pl-3'>What should we name your drink?</h2>
+    <div class="forms py-5 px-5">
+      <%= simple_form_for(@cocktail) do |f| %>
+        <%= f.input :name, label: 'Cocktail name:', error: 'You must name your cocktail!!', label_html: { class: 'form-style' }%>
+        <%= f.button :submit, 'Create new cocktail', class: 'new-button' %>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+

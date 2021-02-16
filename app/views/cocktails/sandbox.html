@@ -1,0 +1,35 @@
+
+<!-- Cocktail's carousel wrapper -->
+ <!--  <div class="carousel-container">
+    <h2 class="recipes">Cocktail Recipes</h2>
+    <div id="multi-item-example" class="carousel slide carousel-multi-item pt-2 car-width" data-ride="carousel">
+ -->      <!--Slides-->
+      <!-- <div class="carousel-inner px-4" role="listbox">
+        <#% @cocktails.each_slice(4).with_index do |cocktail_slice, index| %>
+          <div class="carousel-item <#%= index.zero? ? 'active' : '' %>">
+            <div class="cocktail-grid justify-content-between">
+              <#% cocktail_slice.each do |cocktail| %>
+              <div class="cocktail-card flex-grow-1">
+                <div class="card-title">
+                <#%= link_to cocktail.name, cocktail_path(cocktail) %>
+                </div>
+              </div> -->
+              <!-- <#%= render cocktail_slice %> -->
+              <!-- <#% end %>
+            </div>
+          </div>
+        <#% end %>
+      </div> -->
+      <!--/.Slides-->
+      <!-- <div class="d-flex py-3 pr-2 justify-content-between">
+         <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+         <ol class="carousel-indicators">
+          <#% ((@cocktails.size / 4) + 1).times do |index|  %>
+            <li data-target="#multi-item-example" data-slide-to="<%=index%>" class="<%= index.zero? ? 'active' : '' %>"></li>
+          <#% end %>
+        </ol>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div> -->
+<!-- End of cocktail's carousel wrapper -->

@@ -1,0 +1,35 @@
+<!-- Alternative ProductsCarousel Wrapper-->
+<div class="dark-blue-container pt-5">
+  <div class="container">
+    <div class="text-left">
+      <h2 id="white-me"><%= "Things that contain #{@ingredient.name}" %></h2>
+      <div class="colorstrip-white mt-4 mb-3"></div>
+    </div>
+
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item pt-2" data-ride="carousel">
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+        <% @ingredient.products.each_slice(3).with_index do |product_slice, index| %>
+          <div class="carousel-item <%= index.zero? ? 'active' : '' %>">
+            <div class="product-grid">
+              <%= render product_slice %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <!--/.Slides-->
+      <div class="d-flex py-5">
+         <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+         <ol class="carousel-indicators flex-grow-1">
+          <% ((@ingredient.ingredient_reviews.size / 2) + 1).times do |index|  %>
+            <li data-target="#multi-item-example" data-slide-to="<%=index%>" class="<%= index.zero? ? 'active' : '' %>"></li>
+          <% end %>
+        </ol>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+    <!--/.Carousel Wrapper-->
+  </div>
+</div>
