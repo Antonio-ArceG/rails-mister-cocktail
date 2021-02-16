@@ -1,15 +1,32 @@
-<h1> Ingredients for a <%= @cocktail.name  %></h1>
+<nav class ="navbar mb-0">
+  <div class = "nav-btn">
+    <%= link_to "HOME", cocktails_path%>
+  </div>
+      <div class= "nav-title">
+      <h1>Cocktail Tones</h1>
+    </div>
+    <div class="none">
+  </div>
+</nav>
 
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.description %>
-        <%= dose.ingredient.name %>
-        <%= link_to "Delete", dose_path(dose), method: :delete, "data-confirm": "Are you sure?" %>
-    </li>
-  <% end %>
+<div class="show-container mx-5 my-5">
 
-  <%= link_to "Add new dose", new_cocktail_dose_path(@cocktail.id) %>
-  <%= link_to "Cocktails' list", cocktails_path %>
+  <div class="cocktail-display-card">
 
-</ul>
- <!-- need to finish -->
+    <h1> <%= @cocktail.name  %></h1>
+
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li><%= dose.description %>
+              <%= dose.ingredient.name %>
+              <%= link_to "Delete", dose_path(dose), method: :delete, "data-confirm": "Are you sure?" %>
+          </li>
+        <% end %>
+
+        <%= link_to "Add new dose", new_cocktail_dose_path(@cocktail.id) %>
+        <%= link_to "Cocktails' list", cocktails_path %>
+
+      </ul>
+  </div>
+</div>
+
