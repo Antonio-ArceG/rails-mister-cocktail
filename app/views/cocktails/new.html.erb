@@ -15,6 +15,7 @@
     <div class="forms py-5 px-5">
       <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name, label: 'Cocktail name:', error: 'You must name your cocktail!!', label_html: { class: 'form-style' }%>
+        <%= f.input :photo, as: :file, label_html: { class: 'form-style' } %>
         <%= f.button :submit, 'Create new cocktail', class: 'new-button' %>
       <% end %>
     </div>

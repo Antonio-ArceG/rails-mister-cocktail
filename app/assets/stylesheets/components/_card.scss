@@ -26,5 +26,34 @@
 }
 
 .cocktail-display-card {
+  width: auto;
+  height: auto;
+  background-color: #101010fa;
+  box-shadow: 0 0 10px 5px rgba(192, 26, 201, 0.3);
+  display:flex;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
 
+.cocktail-pic {
+  padding: 40px 40px;
+}
+.cocktail-pic img {
+  width: 300px;
+  height: 300px;
+  display: cover;
+  border-style: double;
+  border-color: rgba(26, 169, 201, 0.3)
+}
+
+.cocktail-text {
+  justify-content: space-evenly;
+  flex-grow: 1;
+  text-align: center;
+  line-height: 1;
+  padding-top: 40px;
+    h1, p {
+    font-family: 'Fahkwang', sans-serif;
+    text-shadow: 2px 2px 4px rgba(255, 51, 78, 0.8);
+  }
 }

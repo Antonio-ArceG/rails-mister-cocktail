@@ -2,3 +2,25 @@
   color: white;
   font-family: 'Fahkwang', sans-serif;
 }
+
+input[type=file] {
+  color: white;
+  font-family: 'Fahkwang', sans-serif;
+  text-shadow: 2px 2px 4px rgba(255, 51, 78, 0.8);
+}
+
+#file-upload-button {
+  color: red !important;
+}
+
+.form-control-filer {
+  color: red;
+}
+
+#form-button {
+  color:red !important;
+}
+
+.recycle {
+  content: "\2672";
+}
