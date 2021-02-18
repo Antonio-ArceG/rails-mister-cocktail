@@ -14,7 +14,13 @@
     <div class="cocktail-container">
       <ul class="cocktail-grid">
         <% @cocktails.each do |cocktail| %>
-        <li class="cocktail-card card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+        <li class="cocktail-card">
+          <% if cocktail.photo.attached? %>
+            <%=cl_image_tag cocktail.photo.key%>
+          <% else %>
+            <%= image_tag "glass.jpg" %>
+          <% end %>
+          <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %></li>
         <%#= link_to "Delete", dose_path(dose), method: :delete, "data-confirm": "Are you sure?" %>
         <% end %>
       </ul>
