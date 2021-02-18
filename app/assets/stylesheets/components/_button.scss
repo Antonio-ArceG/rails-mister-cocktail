@@ -29,7 +29,7 @@
 
 .nav-btn {
   position: absolute;
-  left: 25px;
+  // left: 25px;
   a {
     text-decoration: none;
     color: #373638;
@@ -45,6 +45,15 @@
   a {
     color: white;
   }
+}
+
+.nav-home {
+  left: 25px;
+}
+
+.nav-delete {
+  // position: absolute;
+  right: 25px;
 }
 
 ::-webkit-file-upload-button {
